@@ -1,0 +1,204 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>登录---测试商城</title>
+    <meta name="description" content="">
+    <meta name="Keywords" content="">
+    <link rel="stylesheet" type="text/css" href="/yidong/Public/asset/css/main.css" />
+    <link href="/yidong/Public/asset/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="/yidong/Public/asset/js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="w">
+        <div id="logo"><a href="<?php echo U('Index/index');?>"><img src="/yidong/Public/images/logo.png" /></a><b></b></div>
+        <div class="ad"></div>
+            </div>
+    </div>
+    <div class="content">
+        <div id="content">
+            <div class="login-wrap">
+                <div class="w">
+                    <div class="login-form">
+                        <div class="login-box">
+                            <div class="mt">
+                                <h1>探索岛会员</h1>
+                                <div class="extra-r">
+                                    <div class="regist-link"><a clstag="pageclick|keycount|20150112ABD|1" target="_blank" href="<?php echo U('Index/reg');?>"><b></b>立即注册</a></div>
+                                </div>
+                            </div>
+                            <div class="msg-wrap">
+                                <div class="msg-warn"><b></b>公共场所不建议自动登录，以防账号丢失</div>
+                                <div class="msg-error hide" style="display: none;"><b></b></div>
+                            </div>
+                            <div class="mc">
+                                <div class="form">
+                                    <form method="post" id="formlogin" action="<?php echo U('Login/login');?>">
+                                        <input type="hidden" value="81bdd17d-e74d-4005-9853-be7d276bcb05" name="uuid" id="uuid">
+                                        <input type="hidden" class="hide" value="" id="machineNet" name="machineNet">
+                                        <input type="hidden" class="hide" value="" id="machineCpu" name="machineCpu">
+                                        <input type="hidden" class="hide" value="" id="machineDisk" name="machineDisk">
+                                        <input type="hidden" class="hide" value="" id="eid" name="eid">
+                                        <input type="hidden" class="hide" value="" id="sessionId" name="fp">
+                                        <input type="hidden" class="hide" value="" id="token" name="_t">
+
+                                        <input type="hidden" value="" name="tgYSJfnKnA">
+                                        <div class="item item-fore1">
+                                            <label class="login-label name-label" for="loginname"></label>
+                                            <input type="text" placeholder="邮箱/用户名/已验证手机" autocomplete="off" tabindex="1" name="loginname" class="itxt" id="loginname">
+                                            <span class="clear-btn"></span>
+                                        </div>
+                                        <div class="item item-fore2" id="entry">
+                                            <label for="nloginpwd" class="login-label pwd-label"></label>
+                                            <label style="display: none;" id="sloginpwd">
+                                            </label>
+                                            <input type="password" placeholder="密码" autocomplete="off" tabindex="2" class="itxt itxt-error" name="nloginpwd" id="nloginpwd">
+                                            <input type="hidden" class="hide" value="" id="loginpwd" name="loginpwd">
+                                            <span class="clear-btn"></span>
+                                            <span class="capslock" style="display: none;"><b></b>大小写锁定已打开</span>
+                                        </div>
+                                        <div class="item item-fore3">
+                                            <div class="safe">
+                                        <span>
+                                            <input type="checkbox" clstag="pageclick|keycount|20150112ABD|6" tabindex="3" class="jdcheckbox" name="chkRememberMe" id="autoLogin">
+                                            <label for="">自动登录</label>
+                                        </span>
+                                                                                <span class="forget-pw-safe">
+                                            <a clstag="pageclick|keycount|20150112ABD|8" target="_blank" class="" href="http://safe.jd.com/findPwd/index.action">忘记密码?</a>
+                                        </span>
+                                            </div>
+                                            <div style="display:none;" id="updata" class="updata">安全控件升级了!<a class="up-two" href="javascript:void(0);">立即更新</a> <a onclick="$('#updata').hide();" href="javascript:void(0);" class="up-one"></a></div>
+                                        </div>
+
+                                        <div class="item item-vcode item-fore4  hide " id="o-authcode">
+                                            <input type="text" tabindex="5" name="authcode" class="itxt itxt02" id="authcode" style="ime-mode: disabled;">
+                                            <img onclick="this.src= document.location.protocol +'//authcode.jd.com/verify/image?a=1&amp;acid=81bdd17d-e74d-4005-9853-be7d276bcb05&amp;uid=81bdd17d-e74d-4005-9853-be7d276bcb05&amp;yys='+new Date().getTime();$('#authcode').val('');" src2="https://authcode.jd.com/verify/image?a=1&amp;acid=81bdd17d-e74d-4005-9853-be7d276bcb05&amp;uid=81bdd17d-e74d-4005-9853-be7d276bcb05" class="verify-code" id="JD_Verification1">
+                                            <a onclick="$('#JD_Verification1').click();" href="javascript:void(0)">看不清楚换一张</a>
+                                        </div>
+                                        <div class="item item-fore5">
+                                            <div class="login-btn">
+                                                <a clstag="pageclick|keycount|20150112ABD|2" tabindex="6" id="loginsubmit" class="btn-img btn-entry" href="javascript:;">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="coagent">
+                                    <h5>使用合作网站账号登录探索岛：</h5>
+                                    <ul>
+
+                                        <li>
+                                            <a clstag="pageclick|keycount|20150112ABD|4" onclick="window.location='http://qq.jd.com/new/qq/login.aspx'+window.location.search;return false;" href="javascript:void(0)">QQ</a>
+                                            <span class="line">|</span>
+                                        </li>
+                                        <li>
+                                            <a clstag="pageclick|keycount|20150112ABD_201505135|2" onclick="window.location='http://qq.jd.com/new/wx/login.action'+window.location.search;return false;" href="javascript:void(0)">微信</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="qrcode-login">
+                            <div class="mc">
+                                <div class="qrcode-desc"><h2>用探索岛APP <span class="ml5">扫码安全登录</span></h2></div>
+                                <div class="qrcode-error">
+                                    <b></b>
+                                    <h6>登录失败</h6>
+                                    请刷新二维码后重新扫描
+                                </div>
+                                <div class="qrcode-main">
+                                    <div class="qrcode-img">
+                                        <img alt="" src="https://miscssl.360buyimg.com/lib/img/e/blank.gif"><div id="J-qrcoderror" class="qrcode-error02 hide">							<a href="#none">								<span class="error-icon"></span>								<div class="txt">网络开小差咯<span class="ml10">刷新二维码</span></div>							</a>						</div>
+                                    </div>
+                                    <div class="qrcode-panel">
+                                        <ul>
+                                            <li class="fore1">
+                                                <a href="#none">刷新二维码</a>
+                                            </li>
+                                            <li><a href="<?php echo U('Index/help');?>">使用帮助</a></li>
+                                        </ul>
+                                        <div class="qrcode-tips">
+                                            <span>扫描不上，版本过低？</span>
+                                            <div class="triangle-border tb-border"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a clstag="pageclick|keycount|20150112ABD_201505135|1" class="qrcode-target btn-2qrcode" href="#nogo">扫码登录</a>
+                    </div>
+                </div>
+                <div style="background-color: #e9ad38" class="login-banner">		              <div class="w">			         <div style="background: url(/yidong/Public/images/58Q58PICwd2.jpg) 0px 0px no-repeat;background-color: #e9ad38" class="i-inner" clstag="pageclick|keycount|20150112ABD|46" id="banner-bg"></div>		              </div>		           </div>
+            </div>
+        </div>
+        <div class="w">
+            <div class="ar"><a class="q-link" target="_blank" href="http://surveys.jd.com/index.php?r=survey/index/sid/568245/lang/zh-Hans"><b></b>登录页面，调查问卷</a></div>
+        </div>
+        <div class="w">
+            <div id="footer-2013">
+                <div class="links">
+                    <a href="<?php echo U('Index/aboutme');?>" target="_blank" rel="nofollow">
+                        关于我们
+                    </a>
+                    |
+                    <a href="<?php echo U('Index/contract');?>" target="_blank" rel="nofollow">
+                        联系我们
+                    </a>
+                    |
+                    <a href="<?php echo U('Index/job');?>" target="_blank" rel="nofollow">
+                        人才招聘
+                    </a>
+                    |
+                    <a href="<?php echo U('Seller/login');?>" target="_blank" rel="nofollow">
+                        商家入驻
+                    </a>
+                    |
+                    <a href="<?php echo U('Index/ad');?>" target="_blank" rel="nofollow">
+                        广告服务
+                    </a>
+                    |
+                    <a href="<?php echo U('Index/app');?>" target="_blank" rel="nofollow">
+                        手机探索岛
+                    </a>
+                    |
+                    <a href="<?php echo U('Index/links');?>" target="_blank">
+                        友情链接
+                    </a>
+                    |
+                    <a href="<?php echo U('Index/cps');?>" target="_blank">
+                        销售联盟
+                    </a>
+                    |
+                    <a target="_blank" href="<?php echo U('Index/aboutme');?>">
+                        探索岛社区
+                    </a>
+                    |
+
+                    <a clstag="pageclick|keycount|20150112ABD|9" href="http://en.jd.com/" target="_blank">English Site</a>
+                </div>
+                <div class="copyright">
+                    Copyright&copy;2016-2018&nbsp;&nbsp;探索岛questisle.com&nbsp;版权所有
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    $(document).ready(function(){
+        loginname = $("#loginname").value;
+        nloginpwd = $("#nloginpwd").value;
+        $("#loginsubmit").click(function(){
+            console.log(loginname);
+            if(loginname==''){
+                alert("用户名没有填写");
+                return false;
+            }else if(nloginpwd==''){
+                alert("密码没用填写");
+                return false;
+            }else{
+                $("#formlogin").submit();
+            }
+        })
+    })
+</script>
+</body>
+</html>
